@@ -1,0 +1,103 @@
+body {
+    padding: 0%;
+    margin: 0%;
+}
+
+.index-main-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #222831;
+}
+
+.index-top-container {
+    position: relative;
+    height: 10%;
+    width: 100%;
+    background-color: #222831;
+}
+
+.index-left-container {
+    position: relative;
+    height: 90%;
+    width: 15%;
+    float: left;
+    background-color: #222831;
+}
+
+.index-left-container-menu {
+    position: relative;
+}
+
+.index-left-container-menu-item-dashboard {
+    position: relative;
+    display: inline-block;
+    padding: 10%;
+    width: 80%;
+}
+
+.index-left-container-menu-item-dashboard:hover {
+    background-color: #393E46;
+}
+
+.index-left-container-menu-item-dispatch {
+    position: relative;
+    display: inline-block;
+    padding: 10%;
+    width: 80%;
+}
+
+.index-left-container-menu-item-dispatch:hover {
+    background-color: #393E46;
+}
+
+.index-left-container-menu-item-return {
+    position: relative;
+    display: inline-block;
+    padding: 10%;
+    width: 80%;
+}
+
+.index-left-container-menu-item-return:hover {
+    background-color: #393E46;
+}
+
+.index-left-container-menu-item-shipment {
+    position: relative;
+    display: inline-block;
+    padding: 10%;
+    width: 80%;
+}
+
+.index-left-container-menu-item-shipment:hover {
+    background-color: #393E46;
+}
+
+.index-left-container-menu label {
+    font-family: "Helvetica";
+    color: #EEEEEE;
+    font-size: larger;
+}
+
+.index-left-right-divider {
+    position: relative;
+    height: 90%;
+    width: 1%;
+    float: left;
+}
+
+.index-divider {
+    position: relative;
+    width: 1%;
+    height: 100%;
+    background-color: #00ADB5;
+}
+
+
+.index-right-container {
+    position: relative;
+    height: 90%;
+    width: 84%;
+    float: right;
+    background-color: #222831;
+}
