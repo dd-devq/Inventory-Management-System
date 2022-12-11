@@ -7,6 +7,8 @@ function createWindow() {
         resizable:true,
         webPreferences :   {
             nodeIntegration: true,
+            contextIsolation: false,
+            enableRemoteModule: true,
         }
     })
     window.loadFile(__dirname + '/main/html/index.html')
