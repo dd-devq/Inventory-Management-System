@@ -23,10 +23,13 @@ body {
     width: 15%;
     float: left;
     background-color: #222831;
+    border-radius: 10px;
 }
 
 .index-left-container-menu {
     position: relative;
+    border-radius: 10px;
+
 }
 
 .index-left-container-menu-item-dashboard {
@@ -34,10 +37,15 @@ body {
     display: inline-block;
     padding: 10%;
     width: 80%;
+    border-radius: 10px;
 }
 
 .index-left-container-menu-item-dashboard:hover {
     background-color: #393E46;
+}
+
+.index-left-container-menu-item-dashboard:focus {
+    background-color: #00ADB5;
 }
 
 .index-left-container-menu-item-dispatch {
@@ -45,10 +53,16 @@ body {
     display: inline-block;
     padding: 10%;
     width: 80%;
+    border-radius: 10px;
 }
+
 
 .index-left-container-menu-item-dispatch:hover {
     background-color: #393E46;
+}
+
+.index-left-container-menu-item-dispatch:focus {
+    background-color: #00ADB5;
 }
 
 .index-left-container-menu-item-return {
@@ -56,10 +70,15 @@ body {
     display: inline-block;
     padding: 10%;
     width: 80%;
+    border-radius: 10px;
 }
 
 .index-left-container-menu-item-return:hover {
     background-color: #393E46;
+}
+
+.index-left-container-menu-item-return:focus {
+    background-color: #00ADB5;
 }
 
 .index-left-container-menu-item-shipment {
@@ -67,10 +86,15 @@ body {
     display: inline-block;
     padding: 10%;
     width: 80%;
+    border-radius: 10px;
 }
 
 .index-left-container-menu-item-shipment:hover {
     background-color: #393E46;
+}
+
+.index-left-container-menu-item-shipment:focus {
+    background-color: #00ADB5;
 }
 
 .index-left-container-menu label {
@@ -90,7 +114,7 @@ body {
     position: relative;
     width: 1%;
     height: 100%;
-    background-color: #00ADB5;
+    background-color: #393E46;
 }
 
 

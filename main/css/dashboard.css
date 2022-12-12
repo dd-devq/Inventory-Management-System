@@ -1,0 +1,84 @@
+.dashboard-section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.status-center {
+    position: relative;
+    width: 65%;
+    height: 95%;
+    margin: 15px 15px 15px 15px;
+    float: left;
+}
+
+.status-center-container {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 25%;
+}
+
+.status-center-order {
+    position: relative;
+    width: 31%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: #393E46;
+}
+
+.status-center-receiving-note {
+    position: relative;
+    width: 31%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: #393E46;
+}
+
+.status-center-delivery-note {
+    position: relative;
+    width: 31%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: #393E46;
+}
+
+.status-inventory-container {
+    position: relative;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.status-inventory {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #393E46;
+}
+
+.notification-center {
+    position: relative;
+    width: 30%;
+    height: 95%;
+    float: right;
+    border-radius: 10px;
+    margin: 15px 20px 15px 15px;
+    overflow: auto;
+    background-color: #393E46;
+}
+
+.notification-center-header {
+    position: sticky;
+    padding: 20px;
+}
+
+.notification-center-header label {
+    font-family: "Helvetica";
+    color: #EEEEEE;
+    font-size: x-large;
+}
