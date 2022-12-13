@@ -13,12 +13,41 @@
             <div class="customer-section-header">
                 <label>Customer</label>
             </div>
-            <div class="customer-section-button-container">
-                <button class="customer-section-button" id="customer-section-button">New Customer</button>
+        </div>
+        <div class="new-customer-section">
+            <div class="new-customer-input-container">
+                <input class="new-customer-name" id="new-customer-name"></input>
+            </div>
+            <div class="new-customer-input-container">
+                <input class="new-customer-phone" id="new-customer-phone"></input>
+            </div>
+            <div class="new-customer-input-container">
+                <input class="new-customer-location" id="new-customer-location"></input>
+            </div>
+            <div class="new-customer-button-container">
+                <button type="button" class="add-new-customer-button" id="add-new-customer-button">Add</button>
             </div>
         </div>
+        <div class="customer-section-table">
+            <table class="customer-table">
+                <thead class="customer-table-head" id="customer-table-head">
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody table="customer-table-body" id="customer-table-body">
+                    <tr class="example-row" id="example-row">
+                        <td contenteditable='true' align="Name">Name</td>
+                        <td contenteditable='true' align="Phone">xxx-xxx-xxx-xxx</td>
+                        <td contenteditable='true' align="Location">Location</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <script type="text/javascript" src="../js/shipment.js"></script>
+    <script type="text/javascript" src="../js/shipment.js" type="module"></script>
 </body>
 
 </html>

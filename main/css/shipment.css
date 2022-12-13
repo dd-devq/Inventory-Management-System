@@ -7,7 +7,7 @@
 .customer-section-top {
     position: relative;
     width: 95%;
-    height: 10%;
+    height: 5%;
     margin: 20px;
 }
 
@@ -27,14 +27,47 @@
     vertical-align: middle;
 }
 
-.customer-section-button-container {
+.new-customer-section {
+    position: relative;
+    width: 95%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.new-customer-input-container {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #393E46;
+}
+
+.new-customer-input-container input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+    font-family: "Helvetica";
+    color: #EEEEEE;
+    font-size: x-large;
+
+    background-color: #393E46;
+    background: #393E46;
+    border-color: #393E46;
+    border-style: solid;
+}
+
+.new-customer-button-container {
     position: relative;
     float: right;
-    width: 15%;
+    width: 10%;
     height: 100%;
 }
 
-.customer-section-button {
+.add-new-customer-button {
     width: 100%;
     height: 100%;
 
@@ -47,4 +80,61 @@
     background: #00ADB5;
     border-color: #00ADB5;
     border-style: solid;
+}
+
+.customer-section-table {
+    position: relative;
+    width: 95%;
+    height: 85%;
+    margin: 20px;
+    background-color: #393E46;
+    overflow: auto;
+}
+
+.customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+.customer-table-head th {
+    position: sticky;
+    text-align: left;
+    top: 0;
+    font-family: "Helvetica";
+    color: #222831;
+    font-size: large;
+    padding: 10px;
+    background-color: #00ADB5;
+    border: 1px solid #222831;
+}
+
+td {
+    text-align: left;
+    font-family: "Helvetica";
+    color: #EEEEEE;
+    font-size: large;
+    padding: 10px;
+    border: 1px solid #222831;
+}
+
+.example-row {
+    display: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #222831;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #393E46;
+}
+
+::-webkit-scrollbar-corner {
+    background: #222831;
 }

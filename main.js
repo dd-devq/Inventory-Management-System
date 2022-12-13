@@ -1,11 +1,11 @@
-const {app, BrowserWindow} = require('electron')
+const { app, BrowserWindow } = require('electron')
 
 function createWindow() {
     const window = new BrowserWindow({
-        width:1600,
-        height:900,
-        resizable:true,
-        webPreferences :   {
+        width: 1600,
+        height: 900,
+        resizable: true,
+        webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
             enableRemoteModule: true,
@@ -23,13 +23,13 @@ require('electron-reload')(__dirname, {
 app.whenReady().then(createWindow)
 
 app.on('window-all-closed', () => {
-    if (process.platform!== 'linux') {
-            app.quit()
+    if (process.platform !== 'linux') {
+        app.quit()
     }
 });
 
 app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {
-            createWindow()
+        createWindow()
     }
 });

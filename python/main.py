@@ -7,12 +7,15 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 
-@app.route('/new_customer')
+@app.route('/newcustomer', methods=['POST'])
 def new_customer():
-    return str(crud.create_customer('Vinh', '123-534-879-234', 'Vietnam'))
+    name = request.form.get('customer_name')
+    phone = request.form.get('customer_phone')
+    location = request.form.get('customer_location')
+    return str(crud.create_customer(name, phone, location))
 
 
-@app.route('/read_customer')
+@app.route('/readcustomer')
 def read_customers():
     return str(crud.read_customers())
 

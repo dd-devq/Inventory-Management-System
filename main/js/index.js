@@ -46,7 +46,9 @@ document.getElementById('index-left-container-menu-item-return').addEventListene
     })
 })
 
-document.getElementById('index-left-container-menu-item-shipment').addEventListener('click', () => {
+document.getElementById('index-left-container-menu-item-shipment').addEventListener('click', load_shipment)
+
+function load_shipment() {
     fs.readFile('main/html/shipment.html', (err, data) => {
         document.getElementById('index-right-container').innerHTML = data
         if (err) {
@@ -56,6 +58,5 @@ document.getElementById('index-left-container-menu-item-shipment').addEventListe
         importScript.src = '../js/shipment.js'
         document.head.appendChild(importScript)
     })
-})
-
+}
 
