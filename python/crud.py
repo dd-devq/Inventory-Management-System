@@ -35,7 +35,6 @@ def execute_create_query(query):
         print(err)
         return False
     conn.commit()
-    print('Success')
     return True
 
 
@@ -46,7 +45,6 @@ def execute_update_query(query):
         print(err)
         return False
     conn.commit()
-    print('Success')
     return True
 
 
@@ -84,11 +82,11 @@ def insert_staff(stf_id, stf_name, stf_phone, mgr_id, inv_id):
     execute_create_query(query)
 
 
-def insert_inventory(inv_id, inv_capacity, inv_location, stf_id=None):
+def insert_inventory(inv_id, inv_location, stf_id=None):
     if stf_id == None:
-        query = f"INSERT INTO inventory (inv_id, inv_capacity, inv_location) VALUES ('{inv_id}', '{inv_capacity}', '{inv_location}');"
+        query = f"INSERT INTO inventory (inv_id, inv_location) VALUES ('{inv_id}', '{inv_location}');"
     else:
-        query = f"INSERT INTO inventory VALUES ('{inv_id}', '{inv_capacity}', '{inv_location}', '{stf_id}');"
+        query = f"INSERT INTO inventory VALUES ('{inv_id}', '{inv_location}', '{stf_id}');"
     execute_create_query(query)
 
 
@@ -102,12 +100,12 @@ def insert_manufacturer(key, name):
     execute_create_query(query)
 
 
-def insert_order(ord_id, ord_date, ord_note, ord_status, mfr_name, mgr_id, order):
+def insert_order(ord_id, ord_date, ord_note, mfr_name, mgr_id, order):
     if len(order) == 0:
         print('Invalid Order!')
         return
     else:
-        query = f"INSERT INTO order_note VALUES ('{ord_id}','{ord_date}', '{ord_note}', '{ord_status}', '{mfr_name}', '{mgr_id}');"
+        query = f"INSERT INTO order_note VALUES ('{ord_id}','{ord_date}', '{ord_note}', '{mfr_name}', '{mgr_id}');"
         execute_create_query(query)
         for i in range(len(order)):
             el_series = order[i][2]
@@ -138,7 +136,18 @@ def insert_receive_note(rcv_id, rcv_date, rcv_note, rcv_status, ord_id, inv_id, 
             execute_create_query(query)
 
 
+def insert_delivery_note(del_id, order_date, delivery_date, del_note, del_status, cust_id, mgr_id, del_electronics):
+    query = f"INSERT INTO delivery_note VALUES ('{del_id}', '{order_date}', '{delivery_date}', '{del_note}', '{del_status}', '{cust_id}', '{mgr_id}');"
+    execute_create_query(query)
+    for i in range(len(del_electronics)):
+        el_id = del_electronics[i][0]
+        quantity = del_electronics[i][1]
+        query = f"INSERT INTO temp_del (del_id, el_id, quantity) VALUES ('{del_id}', '{el_id}', '{quantity}');"
+        execute_create_query(query)
+
+
 # NOTE: Update Section
+
 
 def update_db(table, columns_mod, values, column_con, condition):
     if len(columns_mod) != len(values):
@@ -164,6 +173,27 @@ def update_db(table, columns_mod, values, column_con, condition):
 
 # NOTE: Delete Section
 
+
+def delete_db(table, column_con, condition):
+    if len(column_con) != len(condition):
+        print("Invalid Delte")
+        return False
+    query = f"DELETE FROM {table} WHERE "
+    if len(column_con) != 1:
+        index = 0
+        for i in range(len(column_con) - 1):
+            temp_condition = f"{column_con[i]} = '{condition[i]}' AND "
+            query += temp_condition
+            index = i
+        temp_condition = f"{column_con[index + 1]} = '{condition[index + 1]}';"
+        query += temp_condition
+    else:
+        temp_condition = f"{column_con[0]} = '{condition[0]}'; "
+        query += temp_condition
+    print(query)
+    execute_update_query(query)
+
+
 # NOTE: Read Section
 
 
@@ -171,6 +201,12 @@ def read_db(table, column, condition):
     query = f"SELECT * FROM {table} WHERE {column} = '{condition}'"
     obj = execute_read_query(query)
     return len(obj)
+
+
+def read_all_db(table):
+    query = f"SELECT * FROM {table}"
+    obj = execute_read_query(query)
+    return obj
 
 # NOTE: Data Section
 
@@ -210,15 +246,15 @@ def make_staff():
 
 def make_inventory():
     insert_inventory(
-        'INV1', 0, 'Ly Thuong Kiet, District 10, Ho Chi Minh City')
+        'INV1', 'Ly Thuong Kiet, District 10, Ho Chi Minh City')
     insert_inventory(
-        'INV2', 0, 'Thanh Thai, District 10, Ho Chi Minh City')
+        'INV2', 'Thanh Thai, District 10, Ho Chi Minh City')
     insert_inventory(
-        'INV3', 0, 'Cach Mang Thang Tam, District 10, Ho Chi Minh City')
+        'INV3', 'Cach Mang Thang Tam, District 10, Ho Chi Minh City')
     insert_inventory(
-        'INV4', 0, 'Dien Bien Phu, District 10, Ho Chi Minh City')
+        'INV4', 'Dien Bien Phu, District 10, Ho Chi Minh City')
     insert_inventory(
-        'INV5', 0, 'Ly Thai To, District 10, Ho Chi Minh City')
+        'INV5', 'Ly Thai To, District 10, Ho Chi Minh City')
 
 
 def make_order():
@@ -242,19 +278,16 @@ def make_order():
                ['GIGABYTE', 'MONITOR', 'AORUS', 136]]
 
     insert_order('ORD1', '2022-01-04', 'Handle with care!',
-                 'Processing', 'ASUS', 'MGR1', order_1)
+                 'ASUS', 'MGR1', order_1)
     insert_order('ORD2', '2022-02-21', 'Handle with care!',
-                 'Processing', 'AMD', 'MGR2', order_2)
+                 'AMD', 'MGR2', order_2)
     insert_order('ORD3', '2022-03-19', 'Handle with care!',
-                 'Processing', 'MSI', 'MGR3', order_3)
-    insert_order('ORD4', '2022-06-16', 'ASAP',
-                 'Processing', 'GIGABYTE', 'MGR3', order_4)
-    insert_order('ORD5', '2022-09-08', 'None',
-                 'Processing', 'INTEL', 'MGR4', order_5)
+                 'MSI', 'MGR3', order_3)
+    insert_order('ORD4', '2022-06-16', 'ASAP', 'GIGABYTE', 'MGR3', order_4)
+    insert_order('ORD5', '2022-09-08', 'None', 'INTEL', 'MGR4', order_5)
     insert_order('ORD6', '2022-10-27', 'Handle with care!',
-                 'Processing', 'NVIDIA', 'MGR5', order_6)
-    insert_order('ORD7', '2022-12-23', 'None',
-                 'Processing', 'GIGABYTE', 'MGR2', order_7)
+                 'NVIDIA', 'MGR5', order_6)
+    insert_order('ORD7', '2022-12-23', 'None', 'GIGABYTE', 'MGR2', order_7)
 
 
 def make_receive_note():
@@ -314,8 +347,41 @@ def make_receive_note():
 
     insert_receive_note('RCV11', '2022/01/10', 'None', 'Finished',
                         'ORD7', 'INV5', rcv_electronics_7_p1)
-    insert_receive_note('RCV12', '2022/01/20', 'None', 'Finished',
+    insert_receive_note('RCV12', '2022/01/20', 'None', 'Processing',
                         'ORD7', 'INV5', rcv_electronics_7_p2)
+
+
+def make_delivery():
+    delivery_1 = [['AMD-CPU-ZEN', 24], ['INT-CPU-12', 35]]
+
+    delivery_2 = [['ASU-LAPTOP-ZephyrG14', 25]]
+
+    delivery_3 = [['AMD-GPU-6070', 27], ['MSI-LAPTOP-KATANA', 38]]
+
+    delivery_4 = [['NVI-GPU-4090', 133],
+                  ['INT-GPU-ARC', 20], ['GIG-MOTHERBOARD-B590', 13]]
+
+    delivery_5 = [['ASU-MONITOR-PROART', 24], ['GIG-LAPTOP-AERO', 61]]
+
+    delivery_6 = [['NVI-GPU-3070', 109]]
+
+    insert_delivery_note('DEL1', '2022-11-16', '2022-09-11', 'ASAP', 'Finished',
+                         'CUST1', 'MGR1', delivery_1)
+
+    insert_delivery_note('DEL2', '2022-11-20', '2022-09-21', 'None', 'Finished',
+                         'CUST5', 'MGR2', delivery_2)
+
+    insert_delivery_note('DEL3', '2022-11-22', '2022-09-21', 'Delivery evening only!',
+                         'Finished', 'CUST3', 'MGR4', delivery_3)
+
+    insert_delivery_note('DEL4', '2022-11-26', '2022-09-21', 'None', 'Processing',
+                         'CUST2', 'MGR3', delivery_4)
+
+    insert_delivery_note('DEL5', '2022-11-29', '2022-09-21', 'Delivery morning only!',
+                         'Finished', 'CUST4', 'MGR2', delivery_5)
+
+    insert_delivery_note('DEL6', '2022-11-29', '2022-09-21', 'None', 'Finished',
+                         'CUST1', 'MGR5', delivery_6)
 
 
 def start():
@@ -334,8 +400,13 @@ if __name__ == '__main__':
     make_staff()
     make_order()
     make_receive_note()
+    make_delivery()
 
-
-def insert_delivery_note(del_id, order_date, delivery_date, note, status, cust_id, mgr_id, del_electronics):
-    query = f"INSERT INTO delivery VALUES ('{del_id}', '{order_date}', '{delivery_date}', '{note}', '{status}', '{cust_id}', '{mgr_id}');"
-    execute_create_query(query)
+    # update_db('receive_note', ['rcv_status'], ['Finished'], 'rcv_id', 'RCV12')
+    # delete_db('delivery_note', ['del_id'], ['DEL4'])
+    # update_db('delivery_note', ['del_status'], ['Finished'], 'del_id', 'DEL4')
+    # delete_db('manager', ['mgr_id'], ['MGR3'])
+    # delete_db('inventory', ['inv_id'], ['INV1'])
+    # delete_db('customer', ['cust_id'], ['CUST1'])
+    # delete_db('electronics', ['el_id'], ['NVI-GPU-3070'])
+    # delete_db('receive_note', ['rcv_id'], ['RCV1'])

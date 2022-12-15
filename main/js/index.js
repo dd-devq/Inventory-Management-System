@@ -46,16 +46,16 @@ document.getElementById('index-left-container-menu-item-return').addEventListene
     })
 })
 
-document.getElementById('index-left-container-menu-item-shipment').addEventListener('click', load_shipment)
+document.getElementById('index-left-container-menu-item-customer').addEventListener('click', load_customer)
 
-function load_shipment() {
-    fs.readFile('main/html/shipment.html', (err, data) => {
+function load_customer() {
+    fs.readFile('main/html/customer.html', (err, data) => {
         document.getElementById('index-right-container').innerHTML = data
         if (err) {
             return console.log(err)
         }
         var importScript = document.createElement('script')
-        importScript.src = '../js/shipment.js'
+        importScript.src = '../js/customer.js'
         document.head.appendChild(importScript)
     })
 }

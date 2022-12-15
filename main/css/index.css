@@ -81,7 +81,7 @@ body {
     background-color: #00ADB5;
 }
 
-.index-left-container-menu-item-shipment {
+.index-left-container-menu-item-customer {
     position: relative;
     display: inline-block;
     padding: 10%;
@@ -89,11 +89,11 @@ body {
     border-radius: 10px;
 }
 
-.index-left-container-menu-item-shipment:hover {
+.index-left-container-menu-item-customer:hover {
     background-color: #393E46;
 }
 
-.index-left-container-menu-item-shipment:focus {
+.index-left-container-menu-item-customer:focus {
     background-color: #00ADB5;
 }
 
