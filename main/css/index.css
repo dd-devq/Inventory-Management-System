@@ -103,6 +103,134 @@ body {
     font-size: larger;
 }
 
+.index-left-container-menu-item-manager {
+    position: relative;
+    display: inline-block;
+    padding: 10%;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.index-left-container-menu-item-manager:hover {
+    background-color: #393E46;
+}
+
+.index-left-container-menu-item-manager:focus {
+    background-color: #00ADB5;
+}
+
+.index-left-container-menu-item-manufacturer {
+    position: relative;
+    display: inline-block;
+    padding: 10%;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.index-left-container-menu-item-manufacturer:hover {
+    background-color: #393E46;
+}
+
+.index-left-container-menu-item-manufacturer:focus {
+    background-color: #00ADB5;
+}
+
+.index-left-container-menu-item-staff {
+    position: relative;
+    display: inline-block;
+    padding: 10%;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.index-left-container-menu-item-staff:hover {
+    background-color: #393E46;
+}
+
+.index-left-container-menu-item-staff:focus {
+    background-color: #00ADB5;
+}
+
+.index-left-container-menu-item-deliverynote {
+    position: relative;
+    display: inline-block;
+    padding: 10%;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.index-left-container-menu-item-deliverynote:hover {
+    background-color: #393E46;
+}
+
+.index-left-container-menu-item-deliverynote:focus {
+    background-color: #00ADB5;
+}
+
+.index-left-container-menu-item-receivenote {
+    position: relative;
+    display: inline-block;
+    padding: 10%;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.index-left-container-menu-item-receivenote:hover {
+    background-color: #393E46;
+}
+
+.index-left-container-menu-item-receivenote:focus {
+    background-color: #00ADB5;
+}
+
+.index-left-container-menu-item-order {
+    position: relative;
+    display: inline-block;
+    padding: 10%;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.index-left-container-menu-item-order:hover {
+    background-color: #393E46;
+}
+
+.index-left-container-menu-item-order:focus {
+    background-color: #00ADB5;
+}
+
+.index-left-container-menu-item-inventory {
+    position: relative;
+    display: inline-block;
+    padding: 10%;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.index-left-container-menu-item-inventory:hover {
+    background-color: #393E46;
+}
+
+.index-left-container-menu-item-inventory:focus {
+    background-color: #00ADB5;
+}
+
+.index-left-container-menu-item-electronic {
+    position: relative;
+    display: inline-block;
+    padding: 10%;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.index-left-container-menu-item-electronic:hover {
+    background-color: #393E46;
+}
+
+.index-left-container-menu-item-electronic:focus {
+    background-color: #00ADB5;
+}
+
 .index-left-right-divider {
     position: relative;
     height: 90%;

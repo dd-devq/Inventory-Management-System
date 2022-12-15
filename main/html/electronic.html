@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/electronic.css">
+</head>
+
+<body>
+    <div class="electronic-section">
+        <div class="electronic-section-top">
+            <div class="electronic-section-header">
+                <label>Electronics</label>
+            </div>
+        </div>
+        <div class="new-electronic-section">
+            <div class="new-electronic-input-container">
+                <input class="new-electronic-id" id="new-electronic-id"></input>
+            </div>
+            <div class="new-electronic-input-container">
+                <input class="new-electronic-electronictype" id="new-electronic-electronictype"></input>
+            </div>
+            <div class="new-electronic-input-container">
+                <input class="new-electronic-electronicseries" id="new-electronic-electronicseries"></input>
+            </div>
+            <div class="new-electronic-input-container">
+                <input class="new-electronic-electronicstock" id="new-electronic-electronicstock"></input>
+            </div>
+            <div class="new-electronic-input-container">
+                <input class="new-electronic-inventoryid" id="new-electronic-inventoryid"></input>
+            </div>
+            <div class="new-electronic-input-container">
+                <input class="new-electronic-manufacturername" id="new-electronic-manufacturername"></input>
+            </div>
+            <div class="new-electronic-button-container">
+                <button type="button" class="add-new-electronic-button" id="add-new-electronic-button">Add</button>
+            </div>
+        </div>
+        <div class="electronic-section-table">
+            <table class="electronic-table">
+                <thead class="electronic-table-head" id="electronic-table-head">
+                    <tr>
+                        <th>ID</th>
+                        <th>Electronic Type</th>
+                        <th>Electronic Series</th>
+                        <th>Electronic Stock</th>
+                        <th>Inventory ID</th>
+                        <th>Manufacturer Name</th>
+                    </tr>
+                </thead>
+                <tbody table="electronic-table-body" id="electronic-table-body">
+                    <tr class="example-row" id="example-row">
+                        <td contenteditable='true' align="ID">ID</td>
+                        <td contenteditable='true' align="electronictype">xxx-xxx-xxx-xxx</td>
+                        <td contenteditable='true' align="electronicseries">electronic</td>
+                        <td contenteditable='true' align="electronicstock">electronic</td>
+                        <td contenteditable='true' align="inventoryid">electronic</td>
+                        <td contenteditable='true' align="manufacturername">electronic</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/electronic.js" type="module"></script>
+</body>
+
+</html>

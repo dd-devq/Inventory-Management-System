@@ -1,17 +1,17 @@
-.customer-section {
+.deliverynote-section {
     position: relative;
     width: 100%;
     height: 95%;
 }
 
-.customer-section-top {
+.deliverynote-section-top {
     position: relative;
     width: 95%;
     height: 5%;
     margin: 20px;
 }
 
-.customer-section-header {
+.deliverynote-section-header {
     position: relative;
     float: left;
     width: 20%;
@@ -20,31 +20,32 @@
     align-items: center;
 }
 
-.customer-section-header label {
+.deliverynote-section-header label {
     font-family: "Helvetica";
     color: #EEEEEE;
     font-size: xx-large;
     vertical-align: middle;
 }
 
-.new-customer-section {
+.new-deliverynote-section {
     position: relative;
     width: 95%;
     height: 5%;
     display: flex;
     justify-content: space-between;
     margin: 20px;
+
 }
 
-.new-customer-input-container {
+.new-deliverynote-input-container {
     position: relative;
-    width: 20%;
+    width: 10%;
     height: 100%;
     border-radius: 10px;
     background-color: #393E46;
 }
 
-.new-customer-input-container input {
+.new-deliverynote-input-container input {
     position: relative;
     width: 100%;
     height: 100%;
@@ -60,14 +61,14 @@
     border-style: solid;
 }
 
-.new-customer-button-container {
+.new-deliverynote-button-container {
     position: relative;
     float: right;
     width: 10%;
     height: 100%;
 }
 
-.add-new-customer-button {
+.add-new-deliverynote-button {
     width: 100%;
     height: 100%;
 
@@ -82,7 +83,7 @@
     border-style: solid;
 }
 
-.customer-section-table {
+.deliverynote-section-table {
     position: relative;
     width: 95%;
     height: 85%;
@@ -91,13 +92,13 @@
     overflow: auto;
 }
 
-.customer-table {
+.deliverynote-table {
     width: 100%;
     border-collapse: collapse;
     border-radius: 10px;
 }
 
-.customer-table-head th {
+.deliverynote-table-head th {
     position: sticky;
     text-align: left;
     top: 0;
@@ -118,8 +119,8 @@ td {
     border: 1px solid #222831;
 }
 
-.template-row {
-    /* display: none; */
+.example-row {
+    display: none;
 }
 
 

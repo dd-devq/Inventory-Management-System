@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/receivenote.css">
+</head>
+
+<body>
+    <div class="receivenote-section">
+        <div class="receivenote-section-top">
+            <div class="receivenote-section-header">
+                <label>Receive Note</label>
+            </div>
+        </div>
+        <div class="new-receivenote-section">
+            <div class="new-receivenote-input-container">
+                <input class="new-receivenote-id" id="new-receivenote-id"></input>
+            </div>
+            <div class="new-receivenote-input-container">
+                <input class="new-receivenote-receivedate" id="new-receivenote-receivedate"></input>
+            </div>
+            <div class="new-receivenote-input-container">
+                <input class="new-receivenote-receivenote" id="new-receivenote-receivenote"></input>
+            </div>
+            <div class="new-receivenote-input-container">
+                <input class="new-receivenote-receivestatus" id="new-receivenote-receivestatus"></input>
+            </div>
+            <div class="new-receivenote-input-container">
+                <input class="new-receivenote-orderid" id="new-receivenote-orderid"></input>
+            </div>
+            <div class="new-receivenote-input-container">
+                <input class="new-receivenote-inventoryid" id="new-receivenote-inventoryid"></input>
+            </div>
+            <div class="new-receivenote-button-container">
+                <button type="button" class="add-new-receivenote-button" id="add-new-receivenote-button">Add</button>
+            </div>
+        </div>
+        <div class="receivenote-section-table">
+            <table class="receivenote-table">
+                <thead class="receivenote-table-head" id="receivenote-table-head">
+                    <tr>
+                        <th>ID</th>
+                        <th>Receive Date</th>
+                        <th>Receive Note</th>
+                        <th>Receive Status</th>
+                        <th>Order ID</th>
+                        <th>Inventory ID</th>
+                    </tr>
+                </thead>
+                <tbody table="receivenote-table-body" id="receivenote-table-body">
+                    <tr class="example-row" id="example-row">
+                        <td contenteditable='true' align="ID">ID</td>
+                        <td contenteditable='true' align="receivedate">xxx-xxx-xxx-xxx</td>
+                        <td contenteditable='true' align="receivenote">receivenote</td>
+                        <td contenteditable='true' align="receivestatus">receivenote</td>
+                        <td contenteditable='true' align="orderid">receivenote</td>
+                        <td contenteditable='true' align="inventoryid">receivenote</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/receivenote.js" type="module"></script>
+</body>
+
+</html>

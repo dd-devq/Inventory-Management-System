@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/manager.css">
+</head>
+
+<body>
+    <div class="manager-section">
+        <div class="manager-section-top">
+            <div class="manager-section-header">
+                <label>Manager</label>
+            </div>
+        </div>
+        <div class="new-manager-section">
+            <div class="new-manager-input-container">
+                <input class="new-manager-id" id="new-manager-id"></input>
+            </div>
+            <div class="new-manager-input-container">
+                <input class="new-manager-name" id="new-manager-name"></input>
+            </div>
+            <div class="new-manager-input-container">
+                <input class="new-manager-phone" id="new-manager-phone"></input>
+            </div>
+            <div class="new-manager-button-container">
+                <button type="button" class="add-new-manager-button" id="add-new-manager-button">Add</button>
+            </div>
+        </div>
+        <div class="manager-section-table">
+            <table class="manager-table">
+                <thead class="manager-table-head" id="manager-table-head">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody table="manager-table-body" id="manager-table-body">
+                    <tr class="example-row" id="example-row">
+                        <td contenteditable='true' align="Name">ID</td>
+                        <td contenteditable='true' align="Name">Name</td>
+                        <td contenteditable='true' align="Phone">xxx-xxx-xxx-xxx</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/manager.js" type="module"></script>
+</body>
+
+</html>

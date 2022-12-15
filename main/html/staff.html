@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/staff.css">
+</head>
+
+<body>
+    <div class="staff-section">
+        <div class="staff-section-top">
+            <div class="staff-section-header">
+                <label>Staff</label>
+            </div>
+        </div>
+        <div class="new-staff-section">
+            <div class="new-staff-input-container">
+                <input class="new-staff-id" id="new-staff-id"></input>
+            </div>
+            <div class="new-staff-input-container">
+                <input class="new-staff-name" id="new-staff-name"></input>
+            </div>
+            <div class="new-staff-input-container">
+                <input class="new-staff-phone" id="new-staff-phone"></input>
+            </div>
+            <div class="new-staff-input-container">
+                <input class="new-manager-id" id="new-manager-id"></input>
+            </div>
+            <div class="new-staff-input-container">
+                <input class="new-inventory-id" id="new-inventory-id"></input>
+            </div>
+            <div class="new-staff-button-container">
+                <button type="button" class="add-new-staff-button" id="add-new-staff-button">Add</button>
+            </div>
+        </div>
+        <div class="staff-section-table">
+            <table class="staff-table">
+                <thead class="staff-table-head" id="staff-table-head">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Manager ID</th>
+                        <th>Inventory ID</th>
+                    </tr>
+                </thead>
+                <tbody table="staff-table-body" id="staff-table-body">
+                    <tr class="example-row" id="example-row">
+                        <td contenteditable='true' align="ID">ID</td>
+                        <td contenteditable='true' align="Name">Name</td>
+                        <td contenteditable='true' align="Phone">xxx-xxx-xxx-xxx</td>
+                        <td contenteditable='true' align="Manager ID">Manager ID</td>
+                        <td contenteditable='true' align="Inventory ID">Inventory ID</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/staff.js" type="module"></script>
+</body>
+
+</html>

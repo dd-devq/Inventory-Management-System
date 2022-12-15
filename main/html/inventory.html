@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/inventory.css">
+</head>
+
+<body>
+    <div class="inventory-section">
+        <div class="inventory-section-top">
+            <div class="inventory-section-header">
+                <label>Inventory</label>
+            </div>
+        </div>
+        <div class="new-inventory-section">
+            <div class="new-inventory-input-container">
+                <input class="new-inventory-id" id="new-inventory-id"></input>
+            </div>
+            <div class="new-inventory-input-container">
+                <input class="new-inventory-location" id="new-inventory-location"></input>
+            </div>
+            <div class="new-inventory-input-container">
+                <input class="new-inventory-staffid" id="new-inventory-staffid"></input>
+            </div>
+            <div class="new-inventory-button-container">
+                <button type="button" class="add-new-inventory-button" id="add-new-inventory-button">Add</button>
+            </div>
+        </div>
+        <div class="inventory-section-table">
+            <table class="inventory-table">
+                <thead class="inventory-table-head" id="inventory-table-head">
+                    <tr>
+                        <th>ID</th>
+                        <th>Location</th>
+                        <th>Staff ID</th>
+                    </tr>
+                </thead>
+                <tbody table="inventory-table-body" id="inventory-table-body">
+                    <tr class="example-row" id="example-row">
+                        <td contenteditable='true' align="ID">ID</td>
+                        <td contenteditable='true' align="Location">xxx-xxx-xxx-xxx</td>
+                        <td contenteditable='true' align="Staff ID">Location</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/inventory.js" type="module"></script>
+</body>
+
+</html>

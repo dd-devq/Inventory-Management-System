@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/manufacturer.css">
+</head>
+
+<body>
+    <div class="manufacturer-section">
+        <div class="manufacturer-section-top">
+            <div class="manufacturer-section-header">
+                <label>Manufacturer</label>
+            </div>
+        </div>
+        <div class="new-manufacturer-section">
+            <div class="new-manufacturer-input-container">
+                <input class="new-manufacturer-id" id="new-manufacturer-id"></input>
+            </div>
+            <div class="new-manufacturer-input-container">
+                <input class="new-manufacturer-name" id="new-manufacturer-name"></input>
+            </div>
+            <div class="new-manufacturer-button-container">
+                <button type="button" class="add-new-manufacturer-button" id="add-new-manufacturer-button">Add</button>
+            </div>
+        </div>
+        <div class="manufacturer-section-table">
+            <table class="manufacturer-table">
+                <thead class="manufacturer-table-head" id="manufacturer-table-head">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody table="manufacturer-table-body" id="manufacturer-table-body">
+                    <tr class="example-row" id="example-row">
+                        <td contenteditable='true' align="ID">ID</td>
+                        <td contenteditable='true' align="Name">Name</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/manufacturer.js" type="module"></script>
+</body>
+
+</html>

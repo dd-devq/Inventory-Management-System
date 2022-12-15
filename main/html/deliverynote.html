@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/deliverynote.css">
+</head>
+
+<body>
+    <div class="deliverynote-section">
+        <div class="deliverynote-section-top">
+            <div class="deliverynote-section-header">
+                <label>Delivery Note</label>
+            </div>
+        </div>
+        <div class="new-deliverynote-section">
+            <div class="new-deliverynote-input-container">
+                <input class="new-deliverynote-id" id="new-deliverynote-id"></input>
+            </div>
+            <div class="new-deliverynote-input-container">
+                <input class="new-deliverynote-orderdate" id="new-deliverynote-orderdate"></input>
+            </div>
+            <div class="new-deliverynote-input-container">
+                <input class="new-deliverynote-deliverydate" id="new-deliverynote-deliverydate"></input>
+            </div>
+            <div class="new-deliverynote-input-container">
+                <input class="new-deliverynote-deliverynote" id="new-deliverynote-deliverynote"></input>
+            </div>
+            <div class="new-deliverynote-input-container">
+                <input class="new-deliverynote-deliverystatus" id="new-deliverynote-deliverystatus"></input>
+            </div>
+            <div class="new-deliverynote-input-container">
+                <input class="new-deliverynote-customerid" id="new-deliverynote-customerid"></input>
+            </div>
+            <div class="new-deliverynote-input-container">
+                <input class="new-deliverynote-managerid" id="new-deliverynote-managerid"></input>
+            </div>
+            <div class="new-deliverynote-button-container">
+                <button type="button" class="add-new-deliverynote-button" id="add-new-deliverynote-button">Add</button>
+            </div>
+        </div>
+        <div class="deliverynote-section-table">
+            <table class="deliverynote-table">
+                <thead class="deliverynote-table-head" id="deliverynote-table-head">
+                    <tr>
+                        <th>ID</th>
+                        <th>Order Date</th>
+                        <th>Delivery Date</th>
+                        <th>Delivery Note</th>
+                        <th>Delivery Status</th>
+                        <th>Customer ID</th>
+                        <th>Manager ID</th>
+                    </tr>
+                </thead>
+                <tbody table="deliverynote-table-body" id="deliverynote-table-body">
+                    <tr class="example-row" id="example-row">
+                        <td contenteditable='true' align="ID">ID</td>
+                        <td contenteditable='true' align="orderdate">Order Date</td>
+                        <td contenteditable='true' align="deliverydate">xxx-xxx-xxx-xxx</td>
+                        <td contenteditable='true' align="deliverynote">deliverynote</td>
+                        <td contenteditable='true' align="deliverystatus">deliverynote</td>
+                        <td contenteditable='true' align="customerid">deliverynote</td>
+                        <td contenteditable='true' align="managerid">deliverynote</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/deliverynote.js" type="module"></script>
+</body>
+
+</html>

@@ -16,6 +16,9 @@
         </div>
         <div class="new-customer-section">
             <div class="new-customer-input-container">
+                <input class="new-customer-id" id="new-customer-id"></input>
+            </div>
+            <div class="new-customer-input-container">
                 <input class="new-customer-name" id="new-customer-name"></input>
             </div>
             <div class="new-customer-input-container">
@@ -32,16 +35,18 @@
             <table class="customer-table">
                 <thead class="customer-table-head" id="customer-table-head">
                     <tr>
+                        <th>ID</th>
                         <th>Name</th>
                         <th>Phone</th>
                         <th>Location</th>
                     </tr>
                 </thead>
                 <tbody table="customer-table-body" id="customer-table-body">
-                    <tr class="example-row" id="example-row">
-                        <td contenteditable='true' align="Name">Name</td>
-                        <td contenteditable='true' align="Phone">xxx-xxx-xxx-xxx</td>
-                        <td contenteditable='true' align="Location">Location</td>
+                    <tr class="template-row" id="template-row">
+                        <td align="ID" class="id">ID</td>
+                        <td contenteditable='true' align="Name" class="name">Name</td>
+                        <td contenteditable='true' align="Phone" class="phone">xxx-xxx-xxx-xxx</td>
+                        <td contenteditable='true' align="Location" class="location">Location</td>
                     </tr>
                 </tbody>
             </table>

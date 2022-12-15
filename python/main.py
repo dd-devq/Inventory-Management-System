@@ -6,7 +6,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 
-@app.route('/newcustomer', methods=['POST'])
+@app.route('/new_customer', methods=['POST'])
 def new_customer():
     cust_id = request.form.get('customer_id')
     name = request.form.get('customer_name')
@@ -15,9 +15,11 @@ def new_customer():
     crud.insert_customer(cust_id, name, phone, location)
 
 
-@app.route('/readcustomer')
+@app.route('/read_tables', methods=['POST', 'GET'])
 def read_customers():
-    return crud.read_all_db('customer')
+    table = 'customer'
+    print(table)
+    return crud.read_all_db(table)
 
 
 if __name__ == "__main__":

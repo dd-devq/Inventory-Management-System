@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/order.css">
+</head>
+
+<body>
+    <div class="order-section">
+        <div class="order-section-top">
+            <div class="order-section-header">
+                <label>Order</label>
+            </div>
+        </div>
+        <div class="new-order-section">
+            <div class="new-order-input-container">
+                <input class="new-order-id" id="new-order-id"></input>
+            </div>
+            <div class="new-order-input-container">
+                <input class="new-order-orderdate" id="new-order-orderdate"></input>
+            </div>
+            <div class="new-order-input-container">
+                <input class="new-order-ordernote" id="new-order-ordernote"></input>
+            </div>
+            <div class="new-order-input-container">
+                <input class="new-order-orderstatus" id="new-order-orderstatus"></input>
+            </div>
+            <div class="new-order-input-container">
+                <input class="new-order-manufacturerid" id="new-order-manufacturerid"></input>
+            </div>
+            <div class="new-order-input-container">
+                <input class="new-order-managerid" id="new-order-managerid"></input>
+            </div>
+            <div class="new-order-button-container">
+                <button type="button" class="add-new-order-button" id="add-new-order-button">Add</button>
+            </div>
+        </div>
+        <div class="order-section-table">
+            <table class="order-table">
+                <thead class="order-table-head" id="order-table-head">
+                    <tr>
+                        <th>ID</th>
+                        <th>Order Date</th>
+                        <th>Order Note</th>
+                        <th>Order Status</th>
+                        <th>Manufacturer ID</th>
+                        <th>Manager ID</th>
+                    </tr>
+                </thead>
+                <tbody table="order-table-body" id="order-table-body">
+                    <tr class="example-row" id="example-row">
+                        <td contenteditable='true' align="ID">ID</td>
+                        <td contenteditable='true' align="orderdate">xxx-xxx-xxx-xxx</td>
+                        <td contenteditable='true' align="ordernote">order</td>
+                        <td contenteditable='true' align="orderstatus">order</td>
+                        <td contenteditable='true' align="manufacturerid">order</td>
+                        <td contenteditable='true' align="managerid">order</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/order.js" type="module"></script>
+</body>
+
+</html>
