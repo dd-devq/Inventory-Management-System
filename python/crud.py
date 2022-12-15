@@ -389,10 +389,6 @@ def start():
     conn = connect()
     cursor = conn.cursor()
     execute_sql_script('sql/inventory.sql')
-
-
-if __name__ == '__main__':
-    start()
     make_manufacture()
     make_manager()
     make_customer()
@@ -401,6 +397,18 @@ if __name__ == '__main__':
     make_order()
     make_receive_note()
     make_delivery()
+
+
+# if __name__ == '__main__':
+#     start()
+#     make_manufacture()
+#     make_manager()
+#     make_customer()
+#     make_inventory()
+#     make_staff()
+#     make_order()
+#     make_receive_note()
+#     make_delivery()
 
     # update_db('receive_note', ['rcv_status'], ['Finished'], 'rcv_id', 'RCV12')
     # delete_db('delivery_note', ['del_id'], ['DEL4'])
