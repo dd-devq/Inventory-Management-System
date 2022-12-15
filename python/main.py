@@ -12,7 +12,7 @@ def new_customer():
     name = request.form.get('customer_name')
     phone = request.form.get('customer_phone')
     location = request.form.get('customer_location')
-    return str(crud.create_customer(name, phone, location))
+    return str(crud.create_customer('cutomer', name, phone, location))
 
 
 @app.route('/readcustomer')
