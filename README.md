@@ -2,7 +2,7 @@
 
 This project is temporary on hold.
 
-The Database is done.
+The Database is done (sqlite).
 
 The Front-end is half way done. (Cannot render result from Back-end)
 
