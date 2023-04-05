@@ -9,3 +9,5 @@ The Front-end is half way done. (Cannot render result from Back-end)
 The Back-end is done on the CRUD interaction with the Database, failed to communicate with Front-end.
 
 Electron Framework.
+
+NOTE: Prone to SQL Injection
